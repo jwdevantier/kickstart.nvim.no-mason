@@ -1,5 +1,15 @@
 # kickstart.nvim
 
+**NOTE**: *This is a fork of the upstream [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) config.
+The only difference from the point of departure is a single commit which removes the mason plug-in and installs
+lsp-zero. This approach means LSP server requirements are supposed to be installed manually. LSPs can still
+be configured as outlined in `:help lspconfig-all`.*
+
+This change was made in response to `mason` failing to install most LSPs on a NixOS system.
+Also - having a magic package manager download lord-knows-what is probably, maybe also not
+a great idea. If you find that useful, maybe get yourself a proper distro ([NixOS](https://nixos.org))
+or supplement with a better [package manager](https://zero-to-nix.com/start/install).
+
 ## Introduction
 
 A starting point for Neovim that is:
@@ -68,7 +78,7 @@ fork to your machine using one of the commands below, depending on your OS.
 <details><summary> Linux and Mac </summary>
 
 ```sh
-git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+git clone https://github.com/jwdevantier/kickstart.nvim.no-meson.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 ```
 
 </details>
@@ -78,13 +88,13 @@ git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HO
 If you're using `cmd.exe`:
 
 ```
-git clone https://github.com/nvim-lua/kickstart.nvim.git %userprofile%\AppData\Local\nvim\
+git clone https://github.com/jwdevantier/kickstart.nvim.no-masongit %userprofile%\AppData\Local\nvim\
 ```
 
 If you're using `powershell.exe`
 
 ```
-git clone https://github.com/nvim-lua/kickstart.nvim.git $env:USERPROFILE\AppData\Local\nvim\
+git clone https://github.com/jwdevantier/kickstart.nvim.no-masongit $env:USERPROFILE\AppData\Local\nvim\
 ```
 
 </details>
